@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="http://t6.zbjimg.com/output/global/main-44eeda51490b1b10.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	
+
+	<script type="text/javascript" src="./js/echarts.js"></script>
+	<script type="text/javascript" src="./js/china.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<!--首页-导航-->
+		<div class="report-nav">
+			<div class="nav-share zbj-grid">
+				<!-- JiaThis Button BEGIN -->
+				<div class="jiathis_style" style='position: absolute;
+				    left: 770px;
+				    top: 20px;'>
+					<span class="jiathis_txt">分享到：</span>
+					<a class="jiathis_button_qzone">QQ空间</a>
+					<a class="jiathis_button_tsina">新浪微博</a>
+					<a class="jiathis_button_tqq">腾讯微博</a>
+					<a class="jiathis_button_weixin">微信</a>
+					<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+					<a class="jiathis_counter_style"></a>
+				</div>
+				<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+				<!-- JiaThis Button END -->
+
+				<!-- <dl class="clearfix">
+					<dt><i class="share-icon"></i><span style='padding-left: 16px;'>分享到</span></dt>
+					<dd>
+						<a href="#">
+							<i class="weibo"></i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<i class="webchat"></i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<i class="kongjian"></i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<i class="circled-plus"></i>
+						</a>
+					</dd>
+				</dl> -->
+			</div>
+		</div>
+		<!--首页-导航结束-->
+
+		<!--首页-->
+		<div class="report-index zbj-grid">
+
+			<!--首页-侧边-->
+			<div class="index-side">
+				<div class="report-hot">
+					<h3 class="report-hot-hd">热点报告</h3>
+					<div class="report-hot-list" id='report-hot-bd'>
+						<!-- <ul class="report-hot-list" id='report-hot-list'>
+							<li><a href="#">猪八戒指数报告</a></li>
+							<li><a class="hot-active" href="#">猪八戒指数报告</a></li>
+							<li><a href="#">猪八戒指数报告</a></li>
+						</ul> -->
+						<div id="move-list">
+							<a href="#">W3C has released HTML5.0</a>
+							<a href="#">W3C has released HTML5.0</a>
+							<a href="#">W3C has released HTML5.0</a>
+							<a href="#">W3C has released HTML5.0</a>
+							<a href="#">W3C has released HTML5.0</a>
+							<a href="#">W3C has released HTML5.0</a>
+							<a href="#">W3C has released HTML5.0</a>
+							<a href="#">W3C has released HTML5.0</a>
+						</div>
+					</div>
+				</div>
+				<div class="report-other">
+					<h3 class="report-other-hd">其他报告</h3>
+					<div class="report-other-bd">
+						<dl class="report-other-list">
+							<dd>
+								<a href="#">行业报告</a>
+							</dd>
+							<dd>
+								<a class="other-active" href="#">运营报告</a>
+							</dd>
+							<dd>
+								<a href="#">趣味报告</a>
+							</dd>
+							<dd>
+								<a href="#">热点报告</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!--首页-侧边结束-->
+
+			<!--首页-主体-->
+			<div class="index-main">
+				<!--首页-区域分布-->
+				<div class="area">
+					<div class="title-area">
+						<span class='title-span'>交易地域分布</span>
+						<div class="title-operate">
+							<a href="" class="operate-btn">我要创业</a>
+							<a href="" class="operate-btn">我来服务</a>
+						</div>
+					</div>
+					<div class="area-content">
+						<div class="content-map" id="content-map"></div>
+						<div class="map-top-area">
+							<p class="p-padding-top">和<span class='red-font'>重庆</span></p>
+							<p class="p-text">交易城市排行榜</p>
+							<ul>
+								<li>
+									<span class='drag-font'>No.1</span> 北京
+								</li>
+								<li>
+									<span class='drag-font'>No.2</span> 北京
+								</li>
+								<li>
+									<span class='drag-font'>No.3</span> 北京
+								</li>
+								<li>
+									<span class='drag-font'>No.4</span> 北京
+								</li>
+								<li>
+									<span class='drag-font'>No.5</span> 北京
+								</li>
+							</ul>
+						</div>
+						<div class="area-description fr">
+							<p>连接指数</p>
+							<p class="mt-f5">最大的地区服务商成交金额为100，其余地区为其成交额占最大地区的百分比*100；A地和B地的连接指数按A地到B地的成交金额占A地成交金额的百分比*A地的连接指数。</p>
+							<p class="link-top-10">连接指数TOP10</p>
+							<div class="area-top-5" id="area-top-6">
+								<div class="link-top-list">
+									<span>重庆</span><a title="100" style="width: 100px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>北京</span><a title="90.59" style="width: 91px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>深圳</span><a title="82.47" style="width: 82px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>广州</span><a title="81.68" style="width: 81px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>成都</span><a title="62.95" style="width: 63px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>上海</span><a title="56.83" style="width: 57px;"></a>
+								</div>
+									<div class="link-top-list">
+									<span>天津</span><a title="41.89" style="width: 42px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>南昌</span><a title="39.90" style="width: 40px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>武汉</span><a title="26.92" style="width: 27px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>杭州</span><a title="26.49" style="width: 26px;"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--首页-区域分布结束-->
+
+				<!--首页-基础设施-->
+				<div class="mt-26">
+					<div class="title-area">
+						<span class='title-span'>基础设施</span>
+						<div class="title-operate">
+							<a href="" class="operate-btn">我要看城市</a>
+						</div>
+					</div>
+					<div class="base-content">
+						<span class="position-abs outside-font compoent-jl">公司建立</span>
+						<div class="radius-common compoent-radius"></div>
+
+						<div class="pinpai-des-line"></div>
+						<span class="position-abs outside-font pin-des-font">品牌设计</span>
+						<div class="radius-common pin-des-radius"></div>
+
+						<div class="pinpai-baohu-line"></div>
+						<span class="position-abs outside-font pin-baohu-font">品牌保护</span>
+						<div class="radius-common pin-baohu-radius"></div>
+
+						<div class="pinpai-tg-line"></div>
+						<span class="position-abs outside-font pin-tg-font">品牌推广</span>
+						<div class="radius-common pin-tg-radius"></div>
+
+						<!--竖排8个-->
+						<span class="webchat-tg col-commom-abs">微信推广</span>
+						<span class="bqbh col-commom-abs">版权保护</span>
+						<span class="app-dev col-commom-abs">APP开发</span>
+						<span class="logo-des col-commom-abs">LOGO设计</span>
+						<span class="xuanchuan col-commom-abs">宣传单</span>
+						<span class="net-dev col-commom-abs">网站开发</span>
+						<span class="com-law col-commom-abs">公司法务/财务</span>
+						<span class="weibo-tg col-commom-abs">微博推广</span>
+						<!--横排8个-->
+						<span class="wenan-cehua row-common-abs">文案策划</span>
+						<span class="shangbiao-zhuce row-common-abs">商标注册</span>
+						<span class="yuming-zhuce row-common-abs">域名注册</span>
+						<span class="huace-des row-common-abs">画册设计</span>
+						<span class="mingpian-des row-common-abs">名片设计</span>
+						<span class="seo row-common-abs">SEO</span>
+						<span class="zhuanli row-common-abs">专利申请</span>
+						<span class="taobao-tg row-common-abs">淘宝店铺推广</span>
+						<div id="content-pin"></div>
+						<div class="area-description base-desc fr">
+							<p>我们的定位是：</p>
+							<p class="mt-f5">为中小微企业创业者提供最全生命周期的服务。</p>
+							<p class="mt-f5" style="border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">有了猪八戒，敢包全世界！目前猪八戒网站已经占据90%以上的市场份额，交易额达75亿元。</p>
+							<p class="base-big-data">标准服务大类指数：</p>
+							<p class="mt-f5">最大的类目成交金额为100，其余类目为其成交金额占最大类目的百分比*100.。</p>
+							<p class="link-top-10" style="width: 150px;">标准服务大类指数TOP10</p>
+							<div class="area-top-5" id="area-top-6">
+								<div class="link-top-list">
+									<span>网站建设</span><a title="104127" style="width: 90px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>品牌设计</span><a title="93419" style="width: 80px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>品牌策划</span><a title="38259" style="width: 41px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>电商服务</span><a title="36837" style="width: 39px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>技术服务</span><a title="28317" style="width: 30px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>营销推广</span><a title="27345" style="width: 29px;"></a>
+								</div>
+									<div class="link-top-list">
+									<span>装修服务</span><a title="25927" style="width: 27px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>软件开发</span><a title="23232" style="width: 25px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>移动开发</span><a title="15968" style="width: 17px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>真人服务</span><a title="15579" style="width: 16px;"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--首页-基础设施结束-->
+
+				<!--首页-数据积累-->
+				<div class="mt-26">
+					<div class="title-area">
+						<span class='title-span'>数据积累</span>
+						<div class="title-operate">
+							<a href="" class="operate-btn">我要看城市</a>
+						</div>
+					</div>
+					<div class="data-content-icon">
+						<div class="content-map" id="data-icon">
+							<!-- ----------------------------------- -->
+							<div class="icon-image">
+								<span class="icon-image-service">一个服务交易平台</span>
+								<span class="icon-image-user">1500万用户行为</span>
+								<span class="icon-image-trade">9000万个交易稿件</span>
+								<span class="icon-image-data">1000万体验数据</span>
+							</div>
+							<div class="icon-group" id="icon-group">
+								<span class="icon-group-knowlge">
+									知识产权
+									<div class="group-knowlge">
+										<div id="group-rectangle">
+											可以为500万家客户提供知识产权
+										</div>
+										<div id="group-triangle">
+										</div>
+									</div>
+								</span>
+								<span class="icon-group-print">
+									印刷
+									<div class="group-print">
+										<div id="group-rectangle">
+											可以为500万家客户提供印刷
+										</div>
+										<div id="group-triangle">
+										</div>
+									</div>
+								</span>
+								<span class="icon-group-tax">
+									财税
+									<div class="group-tax">
+										<div id="group-rectangle">
+											可以为500万家客户提供财务和税务管理服务
+										</div>
+										<div id="group-triangle">
+										</div>
+									</div>
+								</span>
+								<span class="icon-group-education">
+									教育
+									<div class="group-education">
+										<div id="group-rectangle">
+											可以为500万家客户提供教育
+										</div>
+										<div id="group-triangle">
+										</div>
+									</div>
+								</span>
+								<span class="icon-group-service">
+									融资服务
+									<div class="group-service">
+										<div id="group-rectangle">
+											可以为500万家客户提供融资服务
+										</div>
+										<div id="group-triangle">
+										</div>
+									</div>
+								</span>
+							</div>
+							<!-- ----------------------------------- -->
+						</div>
+						
+						<div class="area-description data-total fr">
+							<p>钻井战略</p>
+							<p class="mt-f5">数据海洋中实施“钻进战略”。</p>
+							<p class="mt-f5">花果山众创空间还拥有猪八戒网平台海量订单资源，能为入驻企业提供完善的管理工具、开发工具，并提供专属培训平台、投资平台、演讲平台、社交平台及咨询平台。</p>
+							<p class="link-top-10">指数TOP10</p>
+							<div class="area-top-5" id="area-top-6">
+								<div class="link-top-list">
+									<span>营销推广</span><a title="100" style="width: 90px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>品牌设计</span><a title="94.70" style="width: 80px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>电商服务</span><a title="31.57" style="width: 30px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>品牌策划</span><a title="27.16" style="width: 27px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>网站建设</span><a title="9.38" style="width: 10px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>真人服务</span><a title="6.67" style="width: 6px;"></a>
+								</div>
+									<div class="link-top-list">
+									<span>移动开发</span><a title="6.30" style="width: 5px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>市场调查</span><a title="4.04" style="width: 4px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>装修服务</span><a title="3.34" style="width: 3px;"></a>
+								</div>
+								<div class="link-top-list">
+									<span>动画动漫</span><a title="2.95" style="width: 2px;"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--首页-数据积累结束-->
+
+				<!--首页-超级孵化器-->
+				<div class="mt-26">
+					<div class="title-area">
+						<span class='title-span'>超级孵化器</span>
+						<div class="title-operate">
+							<a href="" class="operate-btn">我要看城市</a>
+						</div>
+					</div>
+					<div class="data-content-super">
+						<div class="content-super">
+							<div class="content-super-div">
+								<span class="super-line"></span>
+								<span class="content-super-title">
+									<div id="super-title-font">截止目前成功孵化企业</div>
+									<div id="super-title-number">1000家</div>
+								</span>
+								<span class="super-line"></span>
+							</div>
+							<div class="super-img-house">
+							</div>
+							<a href="">
+								<div class="super-img-left">
+									<div class="super-img-young">
+									</div>
+									<div class="super-img-word">
+										<span class="super-word-title">最美青年创业</span>
+										<span class="super-word-detail">泽楷传媒CEO周子聪</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="super-img-right">
+									<div class="super-img-style">
+									</div>
+									<div class="super-img-word">
+										<span class="super-word-title">小笼包计划</span>
+										<span class="super-word-detail">专门帮助聋哑人设计师在猪八戒网赚钱</span>
+									</div>
+								</div>
+							</a>
+
+						</div>
+						
+						<div class="area-description super-fhq fr">
+							<p>  </p>
+							<p class="mt-f5">一大批有梦想、有意愿、有能力的科技人员、高校毕业生、农民工、退役军人、失业人员等在猪八戒网如鱼得水，生生不息地由个体成长为团队、工作室、微型企业、小型企业乃至中型公司。
+							紧乘国家创业创新战略东风，打造“百城双创服务平台”。100个区域子站、100个创客空间、100个孵化器、100支创业基金“4个100城布”布局。
+							</p>
+							
+						</div>
+					</div>
+				</div>
+				<!--首页-超级孵化器结束-->
+
+				
+			</div>
+			<!--首页-主体结束-->		
+		</div>
+		<!--首页-结束-->
+	</div>
+	<script type="text/javascript" src="./js/map-config.js"></script>
+	<script type="text/javascript">
+		/*数据积累处hover变化背景色*/
+		$('.icon-group-knowlge').hover(function(){
+		    $(".icon-group").css({background: "url(./img/roll-zscq.png)"})
+		},function(){
+		    $(".icon-group").css({background:"url(./img/roll.png)"})
+		});
+
+		$('.icon-group-print').hover(function(){
+		    $(".icon-group").css({background: "url(./img/roll-ys.png)"})
+		},function(){
+		    $(".icon-group").css({background:"url(./img/roll.png)"})
+		});
+
+		$('.icon-group-tax').hover(function(){
+		    $(".icon-group").css({background: "url(./img/roll-cs.png)"})
+		},function(){
+		    $(".icon-group").css({background:"url(./img/roll.png)"})
+		});
+
+		$('.icon-group-education').hover(function(){
+		    $(".icon-group").css({background: "url(./img/roll-jy.png)"})
+		},function(){
+		    $(".icon-group").css({background:"url(./img/roll.png)"})
+		});
+
+		$('.icon-group-service').hover(function(){
+		    $(".icon-group").css({background: "url(./img/roll-rzfw.png)"})
+		},function(){
+		    $(".icon-group").css({background:"url(./img/roll.png)"})
+		});
+		
+		var stopscroll = false,
+			scrollConHeight = 295, //滚动区的高度
+			scrollContWidth = 278, //滚动区的宽度
+			scrollSpeed = 25, //滚动的速度
+			scrollContainer = document.getElementById('report-hot-bd'),
+			scrollContent = document.getElementById('move-list');
+
+		do {
+			scrollContainer.appendChild(scrollContent.cloneNode(true));
+		} while(scrollContainer.offsetHeigth < scrollConHeight);
+
+		//设置scrollContent的宽度、高度和换行
+		scrollContainer.style.width = scrollContWidth + 'px';
+		scrollContainer.style.height = scrollConHeight + 'px';
+		scrollContainer.noWrap = true;
+
+		//鼠标经过停止滚动，鼠标离开，开始滚动
+		scrollContainer.onmouseover = new Function('stopscroll = true;');
+
+		scrollContainer.onmouseout = new Function('stopscroll = false;');
+
+		//初始化
+		function init() {
+			scrollContainer.scrollTop = 0;
+
+			//按时间间隔不断执行函数scrollUp()
+			setInterval('scrollUp()', scrollSpeed);
+		};
+
+		init();
+
+		//改变滚动位置，如果滚出区域，则判断当前位置进行初始化调整
+		var currTop = 0;
+		function scrollUp() {
+			//如果stopScroll = true，则停止滚动
+			if(stopscroll) {
+				return ;
+			}
+			currTop = scrollContainer.scrollTop;
+			scrollContainer.scrollTop += 1;
+			if(currTop === scrollContainer.scrollTop) {
+				//如果滚动到顶部就初始化
+				scrollContainer.scrollTop = 0;
+				scrollContainer.scrollTop += 1;
+			}
+		}
+	</script>
+</body>
+</html>
